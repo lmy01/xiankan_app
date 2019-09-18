@@ -1,0 +1,99 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/joke/joke",
+			"style": {
+				"navigationBarTitleText": "笑话"
+			}
+		},
+        {
+        	"path": "pages/novel/novel",
+        	"style": {
+        		"navigationBarTitleText": "小说"
+        	}
+        },
+        {
+        	"path": "pages/video/video",
+        	"style": {
+        		"navigationBarTitleText": "视频"
+        	}
+        },
+        {
+        	"path": "pages/inquire/inquire",
+        	"style": {
+        		"navigationBarTitleText": "查查"
+        	}
+        },
+        {
+        	"path": "pages/mine/mine",
+        	"style": {
+        		"navigationBarTitleText": "我的"
+        	}
+        }
+        ,{
+            "path" : "pages/joke-detail/joke-detail",
+            "style" : {
+                "navigationBarTitleText": "评论"
+            }
+        }
+        ,{
+            "path" : "pages/novel-detail/novel-detail",
+            "style" : {
+                "navigationBarTitleText": "详情"
+            }
+        }
+        ,{
+            "path" : "pages/novel-chapter/novel-chapter",
+            "style" : {
+                "navigationBarTitleText": "章节"
+            }
+        }
+        ,{
+            "path" : "pages/weather/weather",
+            "style" : {
+                "navigationBarTitleText": "天气"
+            }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "xiankan",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+    "tabBar": {
+        "selectedColor": "#2aa515",
+        "list": [
+            {
+                "pagePath": "pages/joke/joke",
+                "iconPath": "static/imgs/joke.png",
+                "selectedIconPath": "static/imgs/joke-selected.png",
+                "text": "笑话"
+            },
+            {
+                "pagePath": "pages/novel/novel",
+                "iconPath": "static/imgs/novel.png",
+                "selectedIconPath": "static/imgs/novel-selected.png",
+                "text": "小说"
+            },
+            {
+                "pagePath": "pages/video/video",
+                "iconPath": "static/imgs/video.png",
+                "selectedIconPath": "static/imgs/video-selected.png",
+                "text": "视频"
+            },
+            {
+                "pagePath": "pages/inquire/inquire",
+                "iconPath": "static/imgs/inquire.png",
+                "selectedIconPath": "static/imgs/inquire-selected.png",
+                "text": "查查"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "iconPath": "static/imgs/mine.png",
+                "selectedIconPath": "static/imgs/mine-selected.png",
+                "text": "我的"
+            }
+        ]
+    }
+}
