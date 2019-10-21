@@ -3,19 +3,22 @@
 		{
 			"path": "pages/joke/joke",
 			"style": {
-				"navigationBarTitleText": "笑话"
+				"navigationBarTitleText": "笑话",
+                "enablePullDownRefresh": true
 			}
 		},
         {
         	"path": "pages/novel/novel",
         	"style": {
-        		"navigationBarTitleText": "小说"
+        		"navigationBarTitleText": "小说",
+                "enablePullDownRefresh": true
         	}
         },
         {
         	"path": "pages/video/video",
         	"style": {
-        		"navigationBarTitleText": "视频"
+        		"navigationBarTitleText": "视频",
+                "enablePullDownRefresh": true
         	}
         },
         {
@@ -63,6 +66,7 @@
 	},
     "tabBar": {
         "selectedColor": "#2aa515",
+        "borderStyle": "white",
         "list": [
             {
                 "pagePath": "pages/joke/joke",

@@ -29,29 +29,29 @@
 	export default {
         onLoad() {
            this.list = []
-           this.getList()
+           this.listId = []
+           this.getList("up")
         },
         onPullDownRefresh(){
-            console.log("下拉")
+            this.page = 1
+            this.getList("down")            
         },
         onReachBottom(){
             this.page = this.page + 1
-            this.getList()
+            this.getList("up")
         },
         // components: {uniLoadMore},
 		data() {
 			return {
 				list:[],
+				listId:[],
                 soureidList:[],
                 page:1,
 			}
 		},
 		methods: {
-			getList(){
-                uni.showLoading({
-                    title: '正在加载中...',
-                    mask: false
-                });
+			getList(mode){
+                uni.startPullDownRefresh()
                 uni.request({
                     url: 'https://www.apiopen.top/satinGodApi', //仅为示例，并非真实接口地址。
                     data: {
@@ -59,13 +59,33 @@
                         page: this.page
                     },
                     header: {
-                        // 'custom-header': 'hello' //自定义请求头信息
+                        
+                    },
+                    complete: (res)=>{
+                        uni.stopPullDownRefresh()
                     },
                     success: (res) => {
                         // console.log(res.data);
-                        uni.hideLoading();
                         if(res.data.code===200){
-                            this.list.push(...res.data.data);
+                            // 判断是否已存在
+                            let newList = []
+                            let newIdList = []
+                            newList = res.data.data.filter(item=>{
+                                    // console.log(item.soureid)
+                                if(this.listId.indexOf(item.soureid)<0){
+                                    return item
+                                }
+                            })
+                            newIdList = newList.map(item=>item.soureid)
+                            
+                            if(mode==="down"){
+                                this.list.unshift(...newList);
+                                this.listId.unshift(...newIdList);
+                            }else if(mode==="up"){
+                                this.list.push(...newList);
+                                this.listId.push(...newIdList);
+                            }
+                            
                         }
                     }
                 });

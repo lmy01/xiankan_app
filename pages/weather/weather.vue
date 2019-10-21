@@ -52,8 +52,10 @@
                         city: this.city,
                         // key: '838020829af6b7ff274971866201c3c5'
                     },
+                    complete: (res)=>{
+                        uni.hideLoading();
+                    },
                     success: (res) => {
-                        uni.hideLoading()
                         if(res.data.code===200){
                             this.result = res.data.data
                             this.resultFlag = true

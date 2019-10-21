@@ -1,0 +1,1 @@
+<view class="content" id="inquire_wrap"><block wx:for="{{menuList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['select',['$0'],[[['menuList','',index]]]]]]]}}" class="inquire_list" bindtap="__e"><image src="{{item.img}}" mode></image>{{''+item.title+''}}</view></block></view>

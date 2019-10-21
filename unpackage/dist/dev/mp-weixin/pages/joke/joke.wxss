@@ -1,0 +1,46 @@
+
+.joke_container{
+    padding:5px 15px;
+    margin:5px 0 10px;
+    -webkit-box-shadow: 0 1px 2px #aaa;
+            box-shadow: 0 1px 2px #aaa;
+}
+.joke_container_header{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 5px;
+    color: #aaa;
+    font-size: 13px;
+}
+.joke_container_header_name{
+    max-width: 220px;
+    padding: 3px 0 5px;
+}
+.joke_container_header image{
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
+}
+.joke_container_content{
+    font-size: 15px;
+}
+.joke_container_footer{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 8px;
+    color: #aaa;
+    font-size: 12px;
+}
+.joke_container_footer_time{
+}
+
+
+

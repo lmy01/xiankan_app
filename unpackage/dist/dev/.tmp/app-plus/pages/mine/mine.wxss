@@ -1,0 +1,90 @@
+
+.user_container{
+    padding:10px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-shadow: 0 1px 1px #eee;
+            box-shadow: 0 1px 1px #eee;
+}
+.user_info{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.user_name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.user_text{
+    font-size: 13px;
+}
+.user_setting{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.collection_container,
+.tool_container,
+.exit_container{
+    margin-top:20px;
+}
+.collection_title,
+.tool_title{
+    font-size: 15px;
+    font-weight: bold;
+    padding:5px;
+    border-bottom: 1px solid #eee;
+}
+.collection_list_container,
+.tool_list_container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.collection_list,
+.tool_list{
+    width: 33.3%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 10px; */
+    -webkit-box-shadow: 0 1px 1px #eee;
+            box-shadow: 0 1px 1px #eee;
+}
+.collection_list image,
+.tool_list image{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+

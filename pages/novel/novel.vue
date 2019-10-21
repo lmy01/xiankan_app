@@ -31,33 +31,48 @@
 	export default {
         onLoad() {
             this.list = []
+            this.listId = []
+            this.getList()
+        },
+        onReachBottom(){
+            this.page = this.page + 1
             this.getList()
         },
 		data() {
 			return {
 				list:[],
+                listId:[],
                 page: 1
 			}
 		},
 		methods: {
             getList(){
-                uni.showLoading({
-                    title: '正在加载中...',
-                    mask: false
-                });
+                uni.startPullDownRefresh()
                 uni.request({
                     url: 'https://www.apiopen.top/novelApi', //仅为示例，并非真实接口地址。
                     data: {
                         page: this.page
                     },
                     header: {
-                        // 'custom-header': 'hello' //自定义请求头信息
+                        
+                    },
+                    complete: (res)=>{
+                        uni.stopPullDownRefresh()
                     },
                     success: (res) => {
                         // console.log(res.data);
-                        uni.hideLoading();
                         if(res.data.code===200){
-                            this.list.push(...res.data.data);
+                            let newList = []
+                            let newIdList = []
+                            newList = res.data.data.filter(item=>{
+                                if(this.listId.indexOf(item.bid)<0){
+                                    return item
+                                }
+                            })
+                            newIdList = newList.map(item=>item.bid)
+                            
+                            this.list.push(...newList);
+                            this.listId.push(...newIdList);
                         }
                     }
                 });

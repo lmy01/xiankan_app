@@ -1,0 +1,34 @@
+
+.chapter_container{
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.chapter_title{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.title_sub{
+    color: #ccc;
+    font-size: 12px;
+    margin-left: 15px;
+}
+.chapter_list_container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.chapter_list{
+    min-width: 25px;
+    padding: 5px;
+    margin: 2px;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+

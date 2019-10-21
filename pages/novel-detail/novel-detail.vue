@@ -58,8 +58,10 @@
                 data: {
                     name: options.name
                 },
-                success: (res) => {
+                complete: (res)=>{
                     uni.hideLoading();
+                },
+                success: (res) => {
                     // console.log(res.data.data.aladdin)
                     if(res.data.code===200){
                         this.detail = res.data.data.aladdin
